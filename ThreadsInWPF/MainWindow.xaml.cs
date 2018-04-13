@@ -24,5 +24,18 @@ namespace ThreadsInWPF
         {
             InitializeComponent();
         }
+
+        private void Sensor(object o)
+        {
+            Label l = (Label)o;
+            Random r = new Random();
+            while (SensorsRunning)
+            {
+                Thread.Sleep(1000);
+                double temp = 10 + r.NextDouble() * 15;
+
+                //tilføj kode her som overfører temp til vinduets label
+            }
+        }
     }
 }
