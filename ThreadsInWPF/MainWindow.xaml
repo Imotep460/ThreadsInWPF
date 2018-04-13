@@ -7,8 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Label Name="Label1" Content="Label01" HorizontalAlignment="Left" Margin="181,111,0,0" VerticalAlignment="Top"/>
-        <Button Name="Button1" Content="Button" HorizontalAlignment="Left" Margin="181,210,0,0" VerticalAlignment="Top" Width="75" Click="Button1_Click"/>
+        <Label Name="Label1" HorizontalAlignment="Left" Margin="181,30,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label2" HorizontalAlignment="Left" Margin="181,50,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label3" HorizontalAlignment="Left" Margin="181,70,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label4" HorizontalAlignment="Left" Margin="181,90,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label5" HorizontalAlignment="Left" Margin="181,110,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label6" HorizontalAlignment="Left" Margin="181,130,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label7" HorizontalAlignment="Left" Margin="181,150,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label8" HorizontalAlignment="Left" Margin="181,170,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label9" HorizontalAlignment="Left" Margin="181,190,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Label Name="Label10" HorizontalAlignment="Left" Margin="181,210,0,0" VerticalAlignment="Top">
+            <Label Content="Label"/>
+        </Label>
+        <Button Name="Button1" Content="Start" HorizontalAlignment="Left" Margin="169,250,0,0" VerticalAlignment="Top" Width="75" Click="Button1_Click"/>
 
     </Grid>
 </Window>

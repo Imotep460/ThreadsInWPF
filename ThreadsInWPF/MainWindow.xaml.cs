@@ -16,8 +16,11 @@ using System.Threading;
 
 namespace ThreadsInWPF
 {
+    
     public partial class MainWindow : Window
     {
+        bool SensorsRunning = true;
+        object _lock = new object();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,15 +33,36 @@ namespace ThreadsInWPF
             while (SensorsRunning)
             {
                 Thread.Sleep(1000);
-                double temp = 10 + r.NextDouble() * 15;
+                lock (_lock)
+                {
+                    double temp = r.Next(10, 26);
+                    Dispatcher.Invoke(new Action(() => { l.Content = "Temp: " + temp; }));
+                }
+                
+                //l.Content = temp;
 
-
+                
                 //tilføj kode her som overfører temp til vinduets label
             }
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
+            Thread[] threads = new Thread[10];
+            for (int i = 0; i < 10; i++)
+            {
+                threads[i] = new Thread(Sensor);
+            }
+            threads[0].Start(Label1);
+            threads[1].Start(Label2);
+            threads[2].Start(Label3);
+            threads[3].Start(Label4);
+            threads[4].Start(Label5);
+            threads[5].Start(Label6);
+            threads[6].Start(Label7);
+            threads[7].Start(Label8);
+            threads[8].Start(Label9);
+            threads[9].Start(Label10);
 
         }
     }
