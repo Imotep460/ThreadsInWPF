@@ -12,12 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace ThreadsInWPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -27,15 +25,21 @@ namespace ThreadsInWPF
 
         private void Sensor(object o)
         {
-            Label l = (Label)o;
+            Label l = (Label) o;
             Random r = new Random();
             while (SensorsRunning)
             {
                 Thread.Sleep(1000);
                 double temp = 10 + r.NextDouble() * 15;
 
+
                 //tilføj kode her som overfører temp til vinduets label
             }
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
